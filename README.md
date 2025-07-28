@@ -202,7 +202,7 @@ def FP(name_1)
 1. **Question 1**: How to resolve dependency errors at startup?
    **Answer**: Ensure all dependencies are properly installed. You can try recreating the virtual environment.  
 2. **Question 2**: How to solve the problem of not being able to find the downloaded installation package version?  
-   **Answer**: Please check the installation packages in the "docs/site-packages" directory to ensure that the version you have installed is correct.
+   **Answer**: Please check the installation packages in the requirements.txt to ensure that the version you have installed is correct.
 
 ---
 
