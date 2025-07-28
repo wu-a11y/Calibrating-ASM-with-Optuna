@@ -87,7 +87,6 @@ def simulate_one(first_inflow_value, external_return_flow_value,
     Q_ext = external_return_flow_value
     Temp = 273.15 + 20
 
-    # 创建进水、出水、回流
     influent = WasteStream('influent', T=Temp)
     effluent = WasteStream('effluent', T=Temp)
     int_recycle = WasteStream('internal_recycle', T=Temp)
@@ -375,7 +374,6 @@ def TT(param_names, param_initial_values, day, name_1):
                 if COD_percentage_difference < best_score_cod:
                     best_score_tn = TN_percentage_difference
                     best_score_cod = COD_percentage_difference
-                    # 记录当前参数的最优调整值
                     best_param_values[i] = param_adjustment_value
             elif name_1 == "TN":
                 if TN_percentage_difference < best_score_tn:
@@ -505,7 +503,7 @@ def MO_TT(param_names, param_initial_values, day, name_1):
                                                                                                    input_TP_value)
 
     for i in range(len(param_names)):
-        print(f"正在调参: {param_names[i]}")
+        print(f"Adjusting parameters: {param_names[i]}")
         best_score_tn = float('inf')
         best_score_cod = float('inf')
         for k in range(11):
